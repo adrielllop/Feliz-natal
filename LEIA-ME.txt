@@ -1,0 +1,15 @@
+FELIZ NATAL, NISLENE!
+
+Como abrir:
+1. Extraia o arquivo ZIP.
+2. Abra o arquivo index.html em qualquer navegador (Chrome, Edge, Firefox etc.).
+3. Para publicar na internet, envie os quatro arquivos para a hospedagem mantendo todos na mesma pasta.
+
+Estrutura:
+- index.html
+- style.css
+- script.js
+- LEIA-ME.txt
+
+Todos os arquivos ficam juntos, sem subpastas.
+A fonte decorativa é carregada do Google Fonts; o restante do site funciona localmente.
