@@ -1,15 +1,14 @@
-FELIZ NATAL, NISLENE!
+SITE DE NATAL — HOMENAGEM PARA NISLENE
 
 Como abrir:
 1. Extraia o arquivo ZIP.
-2. Abra o arquivo index.html em qualquer navegador (Chrome, Edge, Firefox etc.).
-3. Para publicar na internet, envie os quatro arquivos para a hospedagem mantendo todos na mesma pasta.
+2. Abra index.html no navegador do celular ou computador.
+3. Aguarde a tela inicial: o Papai Noel corre junto com a barra de carregamento e, ao terminar, a homenagem aparece.
 
-Estrutura:
+Arquivos (todos na raiz, sem subpastas):
 - index.html
 - style.css
 - script.js
 - LEIA-ME.txt
 
-Todos os arquivos ficam juntos, sem subpastas.
-A fonte decorativa é carregada do Google Fonts; o restante do site funciona localmente.
+O site é responsivo e não precisa de instalação. A conexão com a internet é usada apenas para carregar as fontes decorativas do Google Fonts.
