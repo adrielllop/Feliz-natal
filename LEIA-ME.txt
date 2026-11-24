@@ -1,14 +1,14 @@
 SITE ESPECIAL DE NATAL — NISLENE
 
-O que foi atualizado:
-- Fundo vermelho natalino baseado na imagem enviada.
-- Papai Noel ilustrado em SVG (desenhado por código), com braços e pernas animados em movimento de corrida.
-- Barra de carregamento com o Papai Noel acompanhando o progresso.
-- Homenagem especial para sua mãe.
+Atualizações:
+- Fundo vermelho natalino com neve e estrelas.
+- Papai Noel vetorial desenhado por código, animado correndo na barra de carregamento.
+- Três presentes interativos na página: toque em cada um para revelar uma mensagem carinhosa.
+- Carta especial para sua mãe e botão com mais uma surpresa.
 
 Como abrir:
 1. Extraia o ZIP.
-2. Deixe os quatro arquivos juntos na mesma pasta.
+2. Mantenha todos os arquivos juntos na mesma pasta.
 3. Abra index.html no navegador.
 
 Arquivos na raiz, sem subpastas:
@@ -18,4 +18,4 @@ Arquivos na raiz, sem subpastas:
 - fundo-natal.jpg
 - LEIA-ME.txt
 
-A fonte decorativa usa Google Fonts; para carregar a fonte é necessária conexão com a internet.
+A fonte decorativa usa Google Fonts; precisa de internet para carregar as fontes.

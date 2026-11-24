@@ -59,3 +59,33 @@ footer{position:relative;z-index:1;border-top:1px solid #ffe1a033;padding:27px 1
 .modal-x{position:absolute;right:15px;top:10px;border:0;background:none;color:#755b35;font-size:28px;cursor:pointer}.modal-star{font-size:34px;color:#ad8b4b}.modal-card h3{font:47px "Great Vibes",cursive;color:#a3323b;margin:14px 0}.modal-card p{font:400 19px/1.7 "Cormorant Garamond",serif}.heart{font-size:31px;color:#a3323b;margin:15px}.modal-card button:last-child{border:0;background:#8d1117;color:#fff0d1;padding:13px 25px;font:600 9px Montserrat;letter-spacing:2px;cursor:pointer}
 @media(max-width:650px){.nav{height:65px;padding:0 6vw}.brand{font-size:8px;letter-spacing:2px}.nav-date{font-size:8px}.hero{min-height:610px;padding-top:88px}.eyebrow{font-size:7px;letter-spacing:1.7px;gap:8px}.eyebrow span{width:17px}h1{font-size:clamp(76px,19vw,112px)}.name{font-size:16px;letter-spacing:7px}.hero-subtitle{font-size:20px}.scroll-link{margin-top:52px}.letter-section{padding-bottom:75px}.letter-card{padding:44px 25px 38px}.letter-card p{font-size:17px;line-height:1.65}.bottom-note{font-size:6px;letter-spacing:1px}.final-wish{padding-bottom:75px}.final-wish p{font-size:19px}footer{font-size:6px;letter-spacing:1px;gap:9px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+/* Camada extra de decoração natalina */
+.holiday-ribbon{position:relative;z-index:1;width:100%;padding:12px 10px;text-align:center;background:linear-gradient(90deg,transparent,#65050b88,transparent);border-bottom:1px solid #ffe0a044;border-top:1px solid #ffe0a044;color:#ffe4ad;font-size:8px;letter-spacing:2.3px}
+.holiday-ribbon span{color:#fff0bf;padding:0 12px}
+.gifts-section{position:relative;z-index:1;padding:25px 20px 95px;text-align:center;overflow:hidden}
+.gifts-section:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,#ffb64b20,transparent 65%);pointer-events:none}
+.gifts-heading{position:relative;z-index:1}
+.gift-eyebrow{font-size:8px;letter-spacing:2.6px;color:#ffe3aa}
+.gifts-heading h2{font:500 clamp(36px,6vw,58px)/1.05 "Cormorant Garamond",serif;color:#fff7e8;margin:15px 0 8px;text-shadow:0 3px 18px #560000}
+.gifts-heading h2 em{font:1.12em "Great Vibes",cursive;color:#ffe0a0}
+.gifts-heading p{font:400 17px/1.6 "Cormorant Garamond",serif;color:#ffe8d5;margin:0 auto;max-width:520px}
+.gift-grid{position:relative;z-index:1;display:flex;justify-content:center;align-items:flex-end;gap:clamp(22px,5vw,55px);flex-wrap:wrap;margin:55px auto 25px;max-width:720px}
+.gift-box{position:relative;width:145px;height:120px;border:0;border-radius:5px 5px 9px 9px;cursor:pointer;box-shadow:0 16px 28px #32000077;transition:transform .3s,filter .3s;isolation:isolate;color:white}
+.gift-box:hover,.gift-box:focus-visible{transform:translateY(-12px) rotate(-2deg);filter:brightness(1.12);outline:2px solid #ffe6a6;outline-offset:6px}
+.gift-box:active{transform:translateY(-3px) scale(.97)}
+.gift-red{background:linear-gradient(135deg,#e53a3d,#940b16)}
+.gift-gold{background:linear-gradient(135deg,#f3cf78,#a87527)}
+.gift-green{background:linear-gradient(135deg,#28764b,#0b3d2c)}
+.gift-ribbon{position:absolute;z-index:2;top:0;bottom:0;left:calc(50% - 9px);width:18px;background:linear-gradient(90deg,#f6d98d,#fff0bd,#c49a4f)}
+.gift-lid{position:absolute;z-index:3;left:-8px;right:-8px;top:-13px;height:24px;border-radius:4px;background:linear-gradient(180deg,#ffefc8aa,#e2bc6d);box-shadow:0 4px 8px #37000044}
+.gift-bow{position:absolute;z-index:4;top:-35px;left:50%;width:58px;height:27px;transform:translateX(-50%)}
+.gift-bow:before,.gift-bow:after{content:"";position:absolute;width:27px;height:21px;border:7px solid #f7df9d;border-radius:70% 70% 20% 70%;top:0}
+.gift-bow:before{right:26px;transform:rotate(25deg)}.gift-bow:after{left:26px;transform:scaleX(-1) rotate(25deg)}
+.gift-label{position:absolute;z-index:5;left:0;right:0;top:47px;font:26px "Great Vibes",cursive;text-shadow:0 2px 4px #33000088}
+.gift-hint{position:absolute;z-index:5;bottom:12px;left:0;right:0;font:600 7px Montserrat;letter-spacing:1px;color:#fff3dc}
+.gift-message{position:relative;z-index:1;max-width:590px;min-height:74px;margin:28px auto 0;padding:18px 24px;display:flex;align-items:center;justify-content:center;gap:13px;background:#5d030a88;border:1px solid #ffe0a077;box-shadow:0 10px 35px #36000044;color:#fff1d9;font:400 18px/1.5 "Cormorant Garamond",serif;opacity:.94}
+.message-star{color:#ffe2a0;font-size:20px;flex:none}
+.garland{margin:55px auto 0;color:#ffe3a5;letter-spacing:9px;font-size:20px;opacity:.75;text-shadow:0 0 15px #fff0a0}
+.garland span{font-size:13px}
+@media(max-width:600px){.holiday-ribbon{font-size:7px;letter-spacing:1.3px}.gifts-section{padding:15px 18px 75px}.gifts-heading p{font-size:16px}.gift-grid{gap:37px 28px;margin-top:52px}.gift-box{width:125px;height:105px}.gift-label{top:41px;font-size:24px}.gift-message{font-size:17px;padding:16px}.garland{letter-spacing:5px;margin-top:40px}}

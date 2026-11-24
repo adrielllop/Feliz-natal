@@ -22,3 +22,14 @@ document.getElementById("modalX").addEventListener("click",close);
 document.getElementById("modalClose").addEventListener("click",close);
 modal.addEventListener("click",e=>{if(e.target===modal)close();});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")close();});
+
+const giftMessageText = document.getElementById("giftMessageText");
+document.querySelectorAll(".gift-box").forEach((gift) => {
+  gift.addEventListener("click", () => {
+    gift.classList.remove("opened");
+    void gift.offsetWidth;
+    gift.classList.add("opened");
+    giftMessageText.textContent = gift.dataset.message;
+    document.getElementById("giftMessage").classList.add("revealed");
+  });
+});
