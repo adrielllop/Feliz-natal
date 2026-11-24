@@ -1,68 +1,61 @@
 *{box-sizing:border-box}
-:root{--forest:#071e19;--pine:#123b30;--pine2:#1c5540;--gold:#d9bd79;--gold-light:#f4e5bb;--cream:#fff8eb;--red:#a8323d}
+:root{--gold:#f4d58a;--cream:#fff5e8;--deep:#390305;--red:#a50910}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--forest);color:var(--cream);font-family:Montserrat,Arial,sans-serif}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.13;background-image:radial-gradient(#d9bd79 1px,transparent 1px);background-size:45px 45px}
-.loader{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:radial-gradient(ellipse at center,#174735 0%,#0a2a22 48%,#061713 100%);transition:opacity .9s,visibility .9s}
+body{margin:0;background:#7e0509;color:var(--cream);font-family:Montserrat,Arial,sans-serif}
+.loader{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:linear-gradient(145deg,#350003dd,#97070ddd),url("fundo-natal.jpg") center/cover;transition:opacity .9s,visibility .9s}
+.loader:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 5%,#26000388 100%);pointer-events:none}
+.loader>*{position:relative;z-index:1}
 .loader.done{opacity:0;visibility:hidden;pointer-events:none}
-.loader-stars{color:var(--gold);font-size:25px;letter-spacing:8px;margin-bottom:28px;animation:twinkle 1.8s infinite alternate}
-.loader-kicker{font-size:9px;letter-spacing:3px;color:#d8c28d}
-.loader-title{font:clamp(39px,8vw,68px)/1.05 "Cormorant Garamond",serif;margin:22px 0 48px}
-.loader-title em{font-family:"Great Vibes",cursive;color:var(--gold);font-size:1.35em;font-weight:400}
-.track-wrap{width:min(390px,78vw);position:relative;padding-top:35px}
-.track{height:8px;border-radius:20px;background:#ffffff20;border:1px solid #d9bd7966;overflow:hidden}
-.progress{height:100%;width:0;background:linear-gradient(90deg,#b48b45,#f4e5bb);border-radius:20px;box-shadow:0 0 18px #e6c77b88}
-.santa-runner{position:absolute;top:0;left:0;transform:translateX(-50%);font-size:34px;filter:drop-shadow(0 4px 7px #0008);transition:left .08s linear;animation:bob .35s infinite alternate}
-.loader-percent{font-size:11px;letter-spacing:2px;color:var(--gold);margin-top:17px}
-.loader-note{font-size:11px;color:#e4d8bb;letter-spacing:.4px;margin-top:14px}
-@keyframes bob{from{translate:0 0}to{translate:0 -5px}}
-@keyframes twinkle{to{opacity:.45;transform:scale(.94)}}
-.site{position:relative;z-index:1;min-height:100vh;opacity:0;transition:opacity 1.2s;overflow:hidden;background:radial-gradient(ellipse at 50% 28%,#164b39 0%,#0b2e25 42%,#061a16 100%)}
+.loader-sparkles{font-size:26px;letter-spacing:12px;color:#ffe7a8;margin-bottom:25px;text-shadow:0 0 22px #fff}
+.loader-sparkles span{font-size:19px}
+.loader-kicker{font-size:9px;letter-spacing:3px;color:#ffe8bd}
+.loader-title{font:clamp(40px,8vw,68px)/1.02 "Cormorant Garamond",serif;margin:22px 0 40px;text-shadow:0 5px 25px #390000}
+.loader-title em{font:1.35em "Great Vibes",cursive;color:#ffdf91}
+.santa-track-area{width:min(420px,80vw);position:relative;padding-top:62px}
+.track{height:10px;border-radius:20px;background:#4b080b99;border:1px solid #ffe1a477;overflow:hidden;box-shadow:0 0 20px #28000066}
+.progress{height:100%;width:0;background:linear-gradient(90deg,#e9b85b,#fff0b8);border-radius:20px;box-shadow:0 0 17px #ffe5a8}
+.santa-runner{position:absolute;left:0;top:-3px;width:76px;height:76px;transform:translateX(-50%);filter:drop-shadow(0 8px 7px #26000088);transition:left .07s linear}
+.santa-svg{width:100%;height:100%;overflow:visible}
+.santa-front-leg,.santa-back-leg,.santa-front-arm,.santa-back-arm{transform-box:fill-box;transform-origin:top center;animation:run .32s ease-in-out infinite alternate}
+.santa-back-leg,.santa-back-arm{animation-delay:-.32s}
+.santa-front-arm{transform-origin:top right}
+@keyframes run{from{transform:rotate(-27deg)}to{transform:rotate(27deg)}}
+.loader-percent{font-size:11px;letter-spacing:3px;color:#ffe2a0;margin-top:17px}
+.loader-note{font-size:11px;color:#ffead0;margin-top:13px;letter-spacing:.5px}
+.site{position:relative;min-height:100vh;opacity:0;transition:opacity 1.3s;overflow:hidden;background:linear-gradient(180deg,#510006b8 0%,#9b080de0 47%,#c20d13e8 100%),url("fundo-natal.jpg") center top/cover fixed}
 .site.visible{opacity:1}
-.snow-layer{position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.5;background-image:radial-gradient(2px 2px at 25px 35px,#fff 98%,transparent),radial-gradient(1px 1px at 100px 120px,#fff 98%,transparent),radial-gradient(2px 2px at 180px 70px,#fff 98%,transparent),radial-gradient(1px 1px at 240px 180px,#fff 98%,transparent);background-size:280px 230px;animation:snow 18s linear infinite}
-@keyframes snow{to{background-position:0 460px}}
-.ambient{position:absolute;width:400px;height:400px;border-radius:50%;filter:blur(85px);pointer-events:none;opacity:.12}
-.ambient-a{background:#d9bd79;top:8%;left:-250px}.ambient-b{background:#b52e3b;top:48%;right:-280px}
-.nav{height:78px;padding:0 7vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9bd7928;position:relative;z-index:2}
-.brand{font-size:10px;letter-spacing:3px;color:var(--gold-light);font-weight:600}.brand-star{color:var(--gold);font-size:17px;margin-right:8px}
-.nav-right{font-size:9px;letter-spacing:2px;color:#d7c8a6}.nav-right span{color:var(--gold);padding:0 7px}
-.hero{min-height:690px;padding:105px 20px 80px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
-.pretitle{display:flex;align-items:center;gap:14px;font-size:9px;letter-spacing:2.6px;color:#e2ca91}.pretitle span{height:1px;width:30px;background:#d9bd79}
-.small-star{font-size:28px;color:var(--gold);margin-top:38px;text-shadow:0 0 20px #e5c578}
-h1{font:clamp(76px,12vw,140px)/.78 "Great Vibes",cursive;font-weight:400;margin:25px 0 0;text-shadow:0 10px 45px #0005}
-h1 em{font-style:normal;color:var(--gold);font-size:1.03em}
-.name{font:500 clamp(17px,2.2vw,23px) "Cormorant Garamond",serif;letter-spacing:8px;text-transform:uppercase;color:#f5e9cf;margin-top:22px}
-.hero-line{font:400 clamp(17px,2.4vw,23px)/1.6 "Cormorant Garamond",serif;color:#e9e0cc;margin-top:28px}
-.hero-line strong{color:var(--gold-light);font-weight:600}
-.scroll-cue{margin-top:65px;text-decoration:none;color:#d8c99e;font-size:8px;letter-spacing:2px;display:flex;flex-direction:column;gap:13px;align-items:center}
-.scroll-cue span{width:34px;height:34px;border:1px solid #d9bd7977;border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:16px;animation:down 1.3s infinite}
-@keyframes down{50%{transform:translateY(6px)}}
-.letter-section{padding:20px 20px 100px;display:flex;justify-content:center;position:relative}
-.letter-card{position:relative;width:min(650px,100%);padding:54px clamp(27px,7vw,75px) 43px;text-align:center;color:#4b3b27;background:linear-gradient(145deg,#fff9ec,#f1e4c9);box-shadow:0 25px 90px #0007;border:1px solid #e4cf9e;outline:1px solid #d9bd7966;outline-offset:9px}
-.letter-card:before,.letter-card:after{content:"✦";position:absolute;color:#c09b51;font-size:18px}.letter-card:before{top:17px;left:18px}.letter-card:after{bottom:17px;right:18px}
-.card-top,.card-bottom{font-size:8px;letter-spacing:2.5px;color:#9a7841;display:flex;justify-content:center;align-items:center;gap:14px}
-.card-top span:first-child,.card-top span:last-child{font-size:15px;color:#b08b4a}
-.holly{font-size:37px;color:#9c3d3d;transform:rotate(180deg);margin:25px 0 0}
-.letter-card h2{font:600 clamp(44px,7vw,65px)/.85 "Cormorant Garamond",serif;margin:12px 0 30px;color:#244436}
-.letter-card h2 em{font:400 1.2em "Great Vibes",cursive;color:#a3323b}
-.letter{font:400 17px/1.75 "Cormorant Garamond",serif;margin:0 auto 17px;max-width:490px;color:#554832}
-.closing{font:400 39px "Great Vibes",cursive;color:#a3323b;margin-top:25px}
-.signature{font:600 10px Montserrat;letter-spacing:2px;color:#8b7044;margin-top:8px}
-.card-bottom{margin-top:39px;font-size:7px;letter-spacing:1.7px}
-.wish-section{text-align:center;padding:0 20px 100px}
-.wish-icon{font-size:30px;color:var(--gold);margin-bottom:17px}
-.wish-section p{font:400 21px/1.6 "Cormorant Garamond",serif;color:#e6dcc6}
-.surprise-btn{margin-top:20px;padding:15px 23px;border:1px solid #c8a85f;background:#d9bd7910;color:#f2dfb3;font:600 9px Montserrat;letter-spacing:2px;cursor:pointer;transition:.3s}
-.surprise-btn:hover{background:#d9bd79;color:#142d22;box-shadow:0 8px 28px #d9bd7944;transform:translateY(-3px)}
-.surprise-btn span{margin-left:12px}
-footer{border-top:1px solid #d9bd7928;padding:27px 15px;display:flex;justify-content:center;gap:18px;align-items:center;font-size:8px;letter-spacing:2px;color:#bcae8c}
-footer b{color:var(--gold)}
-.modal{position:fixed;inset:0;z-index:20;background:#020e0bd9;display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:.35s}
-.modal.open{opacity:1;visibility:visible}
-.modal-card{position:relative;width:min(430px,100%);padding:48px 32px;text-align:center;background:linear-gradient(145deg,#fff9ec,#eee0c2);color:#4c3a26;border:1px solid #d5b66e;box-shadow:0 20px 90px #0009}
-.modal-x{position:absolute;right:15px;top:10px;border:0;background:none;color:#755b35;font-size:28px;cursor:pointer}
-.modal-crown{font-size:34px;color:#ad8b4b}.modal-heading{font:400 47px "Great Vibes",cursive;color:#a3323b;margin:14px 0}
-.modal-card p{font:400 19px/1.7 "Cormorant Garamond",serif}.modal-heart{font-size:31px;color:#a3323b;margin:15px}
-.modal-close{border:0;background:#164333;color:#fff0d1;padding:13px 25px;font:600 9px Montserrat;letter-spacing:2px;cursor:pointer}
-@media(max-width:650px){.nav{height:65px;padding:0 6vw}.brand{font-size:8px;letter-spacing:2px}.nav-right{font-size:8px}.hero{min-height:610px;padding-top:88px}.pretitle{font-size:7px;letter-spacing:1.7px;gap:8px}.pretitle span{width:17px}.small-star{margin-top:34px}h1{font-size:clamp(76px,19vw,112px)}.name{font-size:16px;letter-spacing:6px}.hero-line{font-size:19px}.scroll-cue{margin-top:52px}.letter-section{padding-bottom:75px}.letter-card{padding:42px 25px 35px}.letter{font-size:17px;line-height:1.65}.card-bottom{font-size:6px;letter-spacing:1px}.wish-section{padding-bottom:75px}.wish-section p{font-size:19px}footer{font-size:6px;letter-spacing:1px;gap:9px}}
+.site:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 20%,#ffb0a01c,transparent 55%),linear-gradient(90deg,#46000444,transparent 25%,transparent 75%,#46000444)}
+.snow-overlay{position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.32;background-image:radial-gradient(2px 2px at 25px 35px,#fff 98%,transparent),radial-gradient(1px 1px at 100px 120px,#fff 98%,transparent),radial-gradient(2px 2px at 180px 70px,#fff 98%,transparent);background-size:280px 230px;animation:snowfall 18s linear infinite}
+@keyframes snowfall{to{background-position:0 460px}}
+.nav{height:76px;padding:0 7vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffe2a044;position:relative;z-index:2;background:#3d000333;backdrop-filter:blur(4px)}
+.brand{font-size:10px;letter-spacing:3px;color:#ffedc8;font-weight:600}.brand span{color:var(--gold);font-size:17px;margin-right:8px}
+.nav-date{font-size:9px;letter-spacing:2px;color:#f8ddc2}.nav-date i{color:var(--gold);font-style:normal;padding:0 7px}
+.hero{min-height:680px;padding:105px 20px 80px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:9px;letter-spacing:2.6px;color:#ffe5b1;text-shadow:0 2px 8px #580000}.eyebrow span{height:1px;width:30px;background:#ffdda0}
+.star-mark{font-size:29px;color:#ffe4a0;margin-top:37px;text-shadow:0 0 22px #fff}
+h1{font:clamp(76px,12vw,140px)/.8 "Great Vibes",cursive;font-weight:400;margin:24px 0 0;color:#fff9ed;text-shadow:0 7px 28px #420000aa}
+h1 em{font-style:normal;color:#ffe1a0}
+.name{font:500 clamp(17px,2.2vw,23px) "Cormorant Garamond",serif;letter-spacing:9px;color:#fff0d7;margin-top:25px;text-shadow:0 2px 12px #500}
+.hero-subtitle{font:400 clamp(18px,2.4vw,24px)/1.6 "Cormorant Garamond",serif;color:#fff0e0;margin-top:27px;text-shadow:0 2px 12px #5a0000}
+.hero-subtitle strong{color:#ffe3a1}
+.scroll-link{margin-top:61px;text-decoration:none;color:#ffe8bd;font-size:8px;letter-spacing:2px;display:flex;flex-direction:column;gap:13px;align-items:center}
+.scroll-link span{width:35px;height:35px;border:1px solid #ffe0a0;border-radius:50%;display:grid;place-items:center;font-size:16px;animation:bounce 1.3s infinite}
+@keyframes bounce{50%{transform:translateY(6px)}}
+.letter-section{padding:15px 20px 100px;display:flex;justify-content:center;position:relative;z-index:1}
+.letter-card{position:relative;width:min(660px,100%);padding:55px clamp(27px,7vw,75px) 44px;text-align:center;color:#503a2b;background:linear-gradient(145deg,#fff9ed,#f1dfc2);box-shadow:0 25px 90px #36000088;border:1px solid #f0d69b;outline:1px solid #ffe3a055;outline-offset:9px}
+.letter-card:before{content:"";position:absolute;inset:10px;border:1px solid #cba96b66;pointer-events:none}
+.corner{position:absolute;color:#a63b32;font:34px "Cormorant Garamond";opacity:.8}.corner-tl{top:9px;left:16px}.corner-tr{top:9px;right:16px;transform:scaleX(-1)}.corner-bl{bottom:9px;left:16px;transform:rotate(180deg)}.corner-br{bottom:9px;right:16px;transform:rotate(180deg) scaleX(-1)}
+.letter-label{font-size:8px;letter-spacing:2.8px;color:#9c7543}.little-star{font-size:22px;color:#b48a4c;margin:22px 0 7px}
+.letter-card h2{font:600 clamp(45px,7vw,66px)/.86 "Cormorant Garamond",serif;color:#284a39;margin:8px 0 29px}.letter-card h2 em{font:1.2em "Great Vibes",cursive;color:#a52b31}
+.letter-card p{font:400 18px/1.72 "Cormorant Garamond",serif;max-width:500px;margin:0 auto 16px;color:#554334}
+.closing{font:42px "Great Vibes",cursive;color:#a52b31;margin-top:25px}.signature{font-size:9px;letter-spacing:2px;font-weight:700;color:#896d42;margin-top:9px}.signature span{color:#a52b31;font-size:14px}
+.bottom-note{font-size:7px;letter-spacing:1.8px;color:#9b7849;margin-top:38px}
+.final-wish{position:relative;z-index:1;text-align:center;padding:0 20px 100px}.snowflake{font-size:30px;color:#ffe4a0}.final-wish p{font:400 22px/1.6 "Cormorant Garamond",serif;color:#fff0dc;text-shadow:0 2px 10px #520000}
+.final-wish button{margin-top:20px;padding:15px 24px;border:1px solid #ffe0a0;background:#65050a55;color:#fff0ce;font:600 9px Montserrat;letter-spacing:2px;cursor:pointer;transition:.3s}
+.final-wish button:hover{background:#ffe1a0;color:#65050a;transform:translateY(-3px);box-shadow:0 8px 28px #30000055}.final-wish button span{margin-left:12px}
+footer{position:relative;z-index:1;border-top:1px solid #ffe1a033;padding:27px 15px;display:flex;justify-content:center;gap:18px;align-items:center;font-size:8px;letter-spacing:2px;color:#ffe5c0;background:#4c000533}footer b{color:#ffe09a}
+.modal{position:fixed;inset:0;z-index:20;background:#270003dd;display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:.35s}.modal.open{opacity:1;visibility:visible}
+.modal-card{position:relative;width:min(430px,100%);padding:48px 32px;text-align:center;background:linear-gradient(145deg,#fff9ed,#efdfc4);color:#4c3a26;border:1px solid #d5b66e;box-shadow:0 20px 90px #210000aa}
+.modal-x{position:absolute;right:15px;top:10px;border:0;background:none;color:#755b35;font-size:28px;cursor:pointer}.modal-star{font-size:34px;color:#ad8b4b}.modal-card h3{font:47px "Great Vibes",cursive;color:#a3323b;margin:14px 0}.modal-card p{font:400 19px/1.7 "Cormorant Garamond",serif}.heart{font-size:31px;color:#a3323b;margin:15px}.modal-card button:last-child{border:0;background:#8d1117;color:#fff0d1;padding:13px 25px;font:600 9px Montserrat;letter-spacing:2px;cursor:pointer}
+@media(max-width:650px){.nav{height:65px;padding:0 6vw}.brand{font-size:8px;letter-spacing:2px}.nav-date{font-size:8px}.hero{min-height:610px;padding-top:88px}.eyebrow{font-size:7px;letter-spacing:1.7px;gap:8px}.eyebrow span{width:17px}h1{font-size:clamp(76px,19vw,112px)}.name{font-size:16px;letter-spacing:7px}.hero-subtitle{font-size:20px}.scroll-link{margin-top:52px}.letter-section{padding-bottom:75px}.letter-card{padding:44px 25px 38px}.letter-card p{font-size:17px;line-height:1.65}.bottom-note{font-size:6px;letter-spacing:1px}.final-wish{padding-bottom:75px}.final-wish p{font-size:19px}footer{font-size:6px;letter-spacing:1px;gap:9px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071d19">
-<title>Para minha mãe, Nislene ❤️</title>
+<meta name="theme-color" content="#8d080b">
+<title>Feliz Natal, Nislene ❤️</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,67 +12,100 @@
 </head>
 <body>
 <div class="loader" id="loader">
-  <div class="loader-stars">✦　✧　✦</div>
+  <div class="loader-sparkles">✦ <span>✧</span> ✦</div>
   <div class="loader-kicker">UMA SURPRESA ESPECIAL ESTÁ CHEGANDO</div>
   <div class="loader-title">Preparando a magia<br><em>do seu Natal...</em></div>
-  <div class="track-wrap">
-    <div class="santa-runner" id="santa">🎅</div>
+
+  <div class="santa-track-area">
+    <div class="santa-runner" id="santaRunner" aria-label="Papai Noel correndo">
+      <svg class="santa-svg" viewBox="0 0 150 150" role="img" aria-label="Desenho animado do Papai Noel correndo">
+        <ellipse cx="76" cy="139" rx="40" ry="6" fill="#3d0505" opacity=".25"/>
+        <g class="santa-back-leg">
+          <path d="M72 101 Q58 119 43 126" fill="none" stroke="#a91d22" stroke-width="17" stroke-linecap="round"/>
+          <path d="M43 126 Q28 126 23 136 Q35 144 52 137 L61 131" fill="#241b1a" stroke="#fff0d8" stroke-width="4" stroke-linejoin="round"/>
+        </g>
+        <g class="santa-front-leg">
+          <path d="M83 101 Q100 116 111 124" fill="none" stroke="#c92a2e" stroke-width="18" stroke-linecap="round"/>
+          <path d="M108 122 Q119 116 132 124 Q137 132 124 139 L105 137 Q97 132 108 122" fill="#241b1a" stroke="#fff0d8" stroke-width="4"/>
+        </g>
+        <path d="M55 61 Q42 72 43 102 Q75 119 106 99 Q104 75 91 60Z" fill="#c51f28" stroke="#7d1118" stroke-width="3"/>
+        <path d="M47 95 Q74 106 103 94 L107 105 Q76 120 42 106Z" fill="#fff0d8"/>
+        <path d="M56 68 Q31 69 27 87" fill="none" stroke="#c51f28" stroke-width="14" stroke-linecap="round"/>
+        <g class="santa-back-arm">
+          <path d="M31 83 Q15 92 18 107" fill="none" stroke="#c51f28" stroke-width="13" stroke-linecap="round"/>
+          <circle cx="19" cy="109" r="9" fill="#fff0d8"/>
+        </g>
+        <g class="santa-front-arm">
+          <path d="M93 69 Q115 68 121 49" fill="none" stroke="#c51f28" stroke-width="13" stroke-linecap="round"/>
+          <circle cx="123" cy="46" r="9" fill="#fff0d8"/>
+        </g>
+        <path d="M53 48 Q75 35 97 52 L99 73 Q78 90 51 70Z" fill="#fff0d8"/>
+        <ellipse cx="75" cy="49" rx="24" ry="26" fill="#f2c29a"/>
+        <path d="M52 43 Q53 14 81 17 Q104 19 100 48 Q84 37 72 38 Q62 47 52 43" fill="#c51f28" stroke="#7d1118" stroke-width="3"/>
+        <path d="M51 43 Q76 52 100 43" fill="none" stroke="#fff5e7" stroke-width="8" stroke-linecap="round"/>
+        <path d="M61 57 Q74 65 89 56 Q91 78 75 81 Q58 77 61 57" fill="#fff5e7"/>
+        <circle cx="66" cy="47" r="2.6" fill="#38211b"/><circle cx="85" cy="47" r="2.6" fill="#38211b"/>
+        <path d="M70 57 Q76 62 82 57" fill="none" stroke="#9c3430" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="101" cy="20" r="8" fill="#fff5e7"/>
+        <path d="M47 94 Q76 101 105 92" fill="none" stroke="#f4d69e" stroke-width="4"/>
+        <rect x="76" y="94" width="14" height="10" rx="2" fill="#e5bd64"/>
+      </svg>
+    </div>
     <div class="track"><div class="progress" id="progress"></div></div>
   </div>
   <div class="loader-percent" id="percent">0%</div>
-  <p class="loader-note">O Papai Noel está trazendo um carinho até você ❤️</p>
+  <p class="loader-note">O Papai Noel está trazendo um carinho até você.</p>
 </div>
 
 <div class="site" id="site">
-  <div class="snow-layer" aria-hidden="true"></div>
-  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="snow-overlay" aria-hidden="true"></div>
   <header class="nav">
-    <div class="brand"><span class="brand-star">✦</span> NATAL DE AMOR</div>
-    <div class="nav-right">DEZEMBRO <span>•</span> 2026</div>
+    <div class="brand"><span>✦</span> NATAL DE AMOR</div>
+    <div class="nav-date">DEZEMBRO <i>•</i> 2026</div>
   </header>
-
   <main>
     <section class="hero">
-      <div class="pretitle"><span></span> UMA HOMENAGEM FEITA COM AMOR <span></span></div>
-      <div class="small-star">✧</div>
+      <div class="eyebrow"><span></span> UMA HOMENAGEM FEITA COM AMOR <span></span></div>
+      <div class="star-mark">✧</div>
       <h1>Feliz Natal,<br><em>minha mãe!</em></h1>
-      <div class="name">Nislene</div>
-      <p class="hero-line">Hoje, a estrela mais bonita do Natal<br>tem um nome: <strong>você.</strong></p>
-      <a class="scroll-cue" href="#carta"><span>↓</span> UMA MENSAGEM DO CORAÇÃO</a>
+      <div class="name">NISLENE</div>
+      <p class="hero-subtitle">Hoje, a estrela mais bonita do Natal<br>tem um nome: <strong>você.</strong></p>
+      <a href="#carta" class="scroll-link"><span>↓</span> UMA MENSAGEM DO CORAÇÃO</a>
     </section>
 
     <section class="letter-section" id="carta">
-      <div class="letter-card">
-        <div class="card-top"><span>✦</span><span>COM TODO O MEU AMOR</span><span>✦</span></div>
-        <div class="holly">❧</div>
+      <article class="letter-card">
+        <div class="corner corner-tl">❧</div><div class="corner corner-tr">❧</div>
+        <div class="letter-label">COM TODO O MEU AMOR</div>
+        <div class="little-star">✦</div>
         <h2>Para você,<br><em>mãe.</em></h2>
-        <p class="letter">Mãe, neste Natal eu quero que você saiba o quanto é especial para mim. Nenhum presente conseguiria expressar todo o carinho e a gratidão que sinto por ter você na minha vida.</p>
-        <p class="letter">Que Deus ilumine seus passos, cuide da sua saúde, renove suas forças e encha seu coração de paz. Que nunca faltem motivos para sorrir, sonhos para realizar e amor ao seu redor.</p>
-        <p class="letter">Você merece toda a felicidade do mundo — não apenas no Natal, mas em cada dia do ano. Obrigado por ser minha mãe e por fazer parte da minha história.</p>
+        <p>Mãe, neste Natal eu quero que você saiba o quanto é especial para mim. Nenhum presente conseguiria expressar todo o carinho e a gratidão que sinto por ter você na minha vida.</p>
+        <p>Que Deus ilumine seus passos, cuide da sua saúde, renove suas forças e encha seu coração de paz. Que nunca faltem motivos para sorrir, sonhos para realizar e amor ao seu redor.</p>
+        <p>Você merece toda a felicidade do mundo — não apenas no Natal, mas em cada dia do ano. Obrigado por ser minha mãe e por fazer parte da minha história.</p>
         <div class="closing">Eu te amo, mãe!</div>
-        <div class="signature">Feliz Natal, Nislene ❤️</div>
-        <div class="card-bottom">✧ QUE A LUZ DE DEUS BRILHE SEMPRE SOBRE VOCÊ ✧</div>
-      </div>
+        <div class="signature">FELIZ NATAL, NISLENE <span>♥</span></div>
+        <div class="bottom-note">QUE A LUZ DE DEUS BRILHE SEMPRE SOBRE VOCÊ</div>
+        <div class="corner corner-bl">❧</div><div class="corner corner-br">❧</div>
+      </article>
     </section>
 
-    <section class="wish-section">
-      <div class="wish-icon">❄</div>
+    <section class="final-wish">
+      <div class="snowflake">❄</div>
       <p>Que a magia desta noite vire lembrança bonita,<br>e que o amor esteja presente em todos os seus dias.</p>
-      <button id="surpriseBtn" class="surprise-btn">ABRIR MAIS UM CARINHO <span>✦</span></button>
+      <button id="surpriseBtn">ABRIR MAIS UM CARINHO <span>✦</span></button>
     </section>
   </main>
-
   <footer><span>FEITO COM AMOR</span><b>✦</b><span>PARA A MELHOR MÃE DO MUNDO</span></footer>
 </div>
 
 <div class="modal" id="modal" aria-hidden="true">
   <div class="modal-card">
     <button class="modal-x" id="modalX" aria-label="Fechar">×</button>
-    <div class="modal-crown">✧</div>
-    <div class="modal-heading">Meu maior presente...</div>
+    <div class="modal-star">✧</div>
+    <h3>Meu maior presente...</h3>
     <p>...é ter você como mãe. Que seu Natal seja abençoado, cheio de paz, saúde e amor. Você mora para sempre no meu coração. ❤️</p>
-    <div class="modal-heart">♡</div>
-    <button id="modalClose" class="modal-close">TE AMO, MÃE</button>
+    <div class="heart">♡</div>
+    <button id="modalClose">TE AMO, MÃE</button>
   </div>
 </div>
 <script src="script.js"></script>

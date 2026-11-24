@@ -1,14 +1,21 @@
-SITE DE NATAL — HOMENAGEM PARA NISLENE
+SITE ESPECIAL DE NATAL — NISLENE
+
+O que foi atualizado:
+- Fundo vermelho natalino baseado na imagem enviada.
+- Papai Noel ilustrado em SVG (desenhado por código), com braços e pernas animados em movimento de corrida.
+- Barra de carregamento com o Papai Noel acompanhando o progresso.
+- Homenagem especial para sua mãe.
 
 Como abrir:
-1. Extraia o arquivo ZIP.
-2. Abra index.html no navegador do celular ou computador.
-3. Aguarde a tela inicial: o Papai Noel corre junto com a barra de carregamento e, ao terminar, a homenagem aparece.
+1. Extraia o ZIP.
+2. Deixe os quatro arquivos juntos na mesma pasta.
+3. Abra index.html no navegador.
 
-Arquivos (todos na raiz, sem subpastas):
+Arquivos na raiz, sem subpastas:
 - index.html
 - style.css
 - script.js
+- fundo-natal.jpg
 - LEIA-ME.txt
 
-O site é responsivo e não precisa de instalação. A conexão com a internet é usada apenas para carregar as fontes decorativas do Google Fonts.
+A fonte decorativa usa Google Fonts; para carregar a fonte é necessária conexão com a internet.
